@@ -1,5 +1,5 @@
 <template>
-  <v-card max-width="1200" class="mx-auto mt-5">
+  <v-card class="mt-5">
     <v-card-title>Contact me</v-card-title>
     <v-card-text>
       <v-form v-model="valid" @submit.prevent="addMessage" ref="form">
@@ -14,12 +14,12 @@
             <v-textarea label="Your message" auto-grow v-model="message" :rules="messageRules" required />
           </v-col>
           <v-col cols="12" md="4" offset-md="4">
-            <v-btn type="submit" block color="success" :disabled="!valid" :loading="loading">Send message</v-btn>
+            <v-btn type="submit" block color="primary" :loading="loading">Send message</v-btn>
           </v-col>
         </v-row>
       </v-form>
     </v-card-text>
-    <v-snackbar timeout="5000" color="success" v-model="snackbar">Successfully sent message :)</v-snackbar>
+    <v-snackbar timeout="5000" color="primary" v-model="snackbar">Successfully sent message :)</v-snackbar>
   </v-card>
 </template>
 
@@ -53,6 +53,8 @@ export default {
   }),
   methods: {
     async addMessage() {
+      if(!this.valid) return;
+
       try {
         this.loading = true;
         await this.messagesStore.addMessage(this.name, this.mail, this.message);

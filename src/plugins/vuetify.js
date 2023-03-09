@@ -15,7 +15,7 @@ import { createVuetify } from 'vuetify'
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
-    defaultTheme: 'custom',
+    defaultTheme: 'dark',
     themes: {
       dark: {
         dark: true,
@@ -23,6 +23,7 @@ export default createVuetify({
           primary: colors.pink.darken1,
           primaryAlt: colors.pink.darken3,
           secondary: '#9217A3',
+          background: '#263238'
         }
       },
       custom: {

@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 1200px" class="mx-auto py-4">
+  <div class="py-4">
     <v-row class="pa-3 section-row">
       <v-col cols="12" md="4" class="v-center-text" v-if="$vuetify.display.smAndDown">
         <v-icon icon="mdi-human-greeting-variant" :size="iconSize" class="mx-auto"/>
