@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const useAppStore = defineStore('app', {
   state: () => ({
-    token: undefined
+    token: undefined,
   }),
   getters: {
     isLoggedIn: (state) => !!state.token
@@ -17,5 +17,6 @@ export const useAppStore = defineStore('app', {
 
       this.token = response.data.token;
     }
-  }
+  },
+  persist: true,
 })

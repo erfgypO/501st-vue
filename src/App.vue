@@ -23,4 +23,8 @@ export default {
 html {
   overflow-y: unset !important;
 }
+
+.multi-line {
+  white-space: pre;
+}
 </style>
