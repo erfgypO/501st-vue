@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-layout>
-    <v-app-bar color="primaryAlt" class="position-fixed">
+    <v-app-bar color="tertiary" class="position-fixed">
       <v-app-bar-title>501st.tech</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn icon="mdi-home" to="/" class="mr-1" exact/>
@@ -14,7 +14,7 @@
     </v-app-bar>
     <default-view />
 
-    <v-footer color="primaryAlt" class="text-center d-flex flex-column position-fixed" app>
+    <v-footer color="tertiary" class="text-center d-flex flex-column position-fixed" app>
       <div>
         <v-btn v-for="social of socials"
                :key="social.name"
