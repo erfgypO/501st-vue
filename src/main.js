@@ -18,6 +18,6 @@ const app = createApp(App)
 
 registerPlugins(app)
 app.use(plausible, {
-  apiHost: 'https://analytics.501st.tech'
+  apiHost: 'https://hub.501st.tech'
 })
 app.mount('#app')
